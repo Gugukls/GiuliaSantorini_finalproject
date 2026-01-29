@@ -1,12 +1,23 @@
+:root {
+  --primary-text-color: #0A0A0A; /* text color */
+  --secondary-text-color: #707070;
+}
+
+
+@font-face {
+  font-family: Roboto;
+  src: url("/fonts/inter") format("woff2");
+}
+
 * {
-    box-sizing: border-box;
-      margin: 0;
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: Lato, sans-serif;
-    color: inherit;
+  font-family: "Inter", sans-serif;
+  color: var(--primary-text-color);
 }
 
 header {
@@ -15,23 +26,37 @@ header {
 
 a {
   text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1110px;
+  margin: auto;
+  height: 60px;
+}
+
+main {
+    max-width: 1110px;
+  margin: auto;
 
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-      max-width: 1110px;
-        margin: auto;
-        height: 60px;
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+
 }
 
 .nav_list {
-    display: flex;
-    gap: 50px;
-    list-style-type: none;
+  display: flex;
+  gap: 50px;
+  list-style-type: none;
 }
 
 .nav_link {
   list-style-type: none;
+  color: var(--secondary-text-color);
 }

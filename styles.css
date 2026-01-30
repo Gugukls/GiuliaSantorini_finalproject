@@ -1,8 +1,9 @@
 :root {
-  --primary-text-color: #0A0A0A; /* text color */
+  --primary-text-color: #0a0a0a; /* text color */
   --secondary-text-color: #707070;
+  --dark-white-color: #e5e5e5;
+  --nav-height: 64px;
 }
-
 
 @font-face {
   font-family: Roboto;
@@ -15,48 +16,135 @@
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
+  /* margin: 0;
+  padding: 0 16px; */
   font-family: "Inter", sans-serif;
   color: var(--primary-text-color);
+  font-size: 1rem;
 }
 
 header {
   background-color: #fbfbfd;
 }
 
-a {
-  text-decoration: none;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1110px;
   margin: auto;
   height: 60px;
+  gap: 50px;
+  padding: 32px 17px;
+  /* max-width: 896px; */
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 main {
-    max-width: 1110px;
+  max-width: 896px;
   margin: auto;
+}
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 4px;
 }
 
 .logo-text {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
+  letter-spacing: 0.49px;
   color: var(--primary-text-color);
+}
 
+p {
+  color: #e5e5e5;
+  font-weight: 200;
 }
 
 .nav_list {
   display: flex;
   gap: 50px;
-  list-style-type: none;
+  display: none;
 }
 
-.nav_link {
-  list-style-type: none;
-  color: var(--secondary-text-color);
+.nav__hamburger {
+  border: none;
+  background: none;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  padding-inline: 2rem;
+
+  background-color: rgba(255, 255, 255, 0.9);
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  z-index: 10;
+}
+
+/* Solid state */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  background-image: image-set(
+    url("assets/Giulia_Santorini_896.png") 1x,
+    url("assets/Giulia_Santorini_ld.png") 2x
+  );
+
+  min-height: 100vh;
+  padding-top: var(--nav-height);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: flex-end; /* dikey ortalama */
+  justify-content: center; /* yatay ortalama */
+  text-align: center;
+  padding-bottom: 160px;
+}
+
+.hero-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 17px;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: var(--dark-white-color);
 }

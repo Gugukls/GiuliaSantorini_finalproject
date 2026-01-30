@@ -5,25 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giulia Santorini</title>
     <link rel="stylesheet" href="styles.css">
+        <link
+      rel="stylesheet"
+      href="./md.css"
+      media="(min-width:768px) and (max-width: 1023.98px)"
+    />
+    <link rel="stylesheet" href="./lg.css" media="(min-width:1024px)" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<header>
-    <nav>
+<body>
+    <nav class="navbar">
         <a href="#home" class="logo-text">GIULIA SANTORINI</a>
         <ul class="nav_list">
-            <li><a class="nav_link" href="#home">Home</a></li>
-            <li><a class="nav_link" href="#biography">Biography</a></li>
-            <li><a class="nav_link" href="#productions">Productions</a></li>
-            <li><a class="nav_link" href="#contact">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#productions">Productions</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+           <button class="nav__hamburger" aria-label="Open Menu">
+        <img src="./assets/icon/hamburger.svg" alt="" aria-hidden="true" />
+      </button>
     </nav>
-</header>
-<body>
-    <main>
+        <section class="hero">
+        <div class="hero-content">
+        <p class="tagline">THEATRE ACTRESS</p>
     <h1>Giulia Santorini</h1>
-    <p>THEATRE ACTRESS · DRAMA TEACHER</p>
+    <p>Bringing emotional truth to the stage through contemporary and classical theatre</p>
+    </div>
+        </section>
+    
+    <main>
+
     </main>
 </body>
 </html>

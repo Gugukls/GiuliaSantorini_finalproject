@@ -5,11 +5,6 @@
   --nav-height: 64px;
 }
 
-@font-face {
-  font-family: Roboto;
-  src: url("/fonts/inter") format("woff2");
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -82,16 +77,60 @@ p {
   font-weight: 200;
 }
 
-.nav_list {
+/* .nav_list {
   display: flex;
   gap: 50px;
   display: none;
+} */
+
+.nav_list {
+  display: flex; 
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+
+  /* Başlangıçta gizlemek için: */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px); /* Hafif yukarıda dursun */
+  transition: all 0.3s ease; /* Yumuşak açılış efekti */
+}
+
+
+/* Menü açıldığında eklenecek sınıf */
+.nav_list.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hamburger-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  /* Başlangıçta hamburger ikonu */
+  background-image: url("./assets/icon/hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.2s ease; /* Yumuşak geçiş */
+}
+
+/* Menü açık olduğunda ikon değişsin */
+/* Nav listesine eklediğimiz 'is-open' sınıfını referans alıyoruz */
+.nav_list.is-open ~ .nav__hamburger .hamburger-icon {
+  background-image: url("./assets/icon/closehamburger.svg");
 }
 
 .nav__hamburger {
   border: none;
   background: none;
 }
+
 .navbar {
   position: fixed;
   top: 0;
@@ -130,8 +169,8 @@ p {
   background-repeat: no-repeat;
 
   display: flex;
-  align-items: flex-end; /* dikey ortalama */
-  justify-content: center; /* yatay ortalama */
+  align-items: flex-end;
+  justify-content: center;
   text-align: center;
   padding-bottom: 160px;
 }

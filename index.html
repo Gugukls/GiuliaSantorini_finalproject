@@ -33,32 +33,293 @@
         </button>
       </nav>
     </header>
-    <section class="hero">
-      <div class="hero-content">
-        <p class="tagline">THEATRE ACTRESS</p>
-        <h1>Giulia Santorini</h1>
-        <p>
-          Bringing emotional truth to the stage through contemporary and
-          classical theatre
-        </p>
-      </div>
-    </section>
-
     <main>
-      <div class="container">
-        <section id="biography" class="biography-section">
-          <h2>Biography</h2>
-          <p>
-            Giulia Santorini is an accomplished theatre actress known for her
-            versatility and emotional depth. With a career spanning over a
-            decade, she has captivated audiences with her performances in both
-            contemporary and classical theatre productions. Giulia's dedication
-            to her craft and her ability to embody complex characters have
-            earned her critical acclaim and a loyal following.
+      <section class="hero" id="home">
+        <div class="hero-content padding--container">
+          <p class="tagline">THEATRE ACTRESS</p>
+          <h1>Giulia Santorini</h1>
+          <p class="hero_summary">
+            Bringing emotional truth to the stage through contemporary and
+            classical theatre
           </p>
-        </section>
-      </div>
-      div>
+          <div class="hero__mlbtn">
+            <a class="btn" href="#productions">View Productions</a>
+            <a class="btn btn--secondary" href="#contact">Get In Touch</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="biography" class="biography-section padding--container">
+        <div class="heading">
+          <h2>Biography</h2>
+          <hr class="separator" />
+        </div>
+        <div class="biography-text">
+          <p>
+            Giulia Santoro is a Palermo-based theatre actress and drama teacher
+            with over fifteen years of experience in contemporary and classical
+            theatre. Known for her grounded presence and emotional intensity,
+            she builds characters that feel raw, intimate, and deeply human.
+          </p>
+          <p>
+            Born in Sicily and trained in Rome, Giulia developed her artistic
+            identity between stage performance and education. Alongside her
+            acting career, she teaches theatre and expressive movement, working
+            with young adults and professionals who seek a deeper connection
+            between body, voice, and emotion.
+          </p>
+          <p>
+            Her work often explores themes of identity, memory, and the feminine
+            experience, blending classical texts with modern interpretations.
+            She currently lives and works in Palermo, collaborating with
+            independent theatre companies across Italy.
+          </p>
+        </div>
+        <div class="info-cards mt-4rem">
+          <div class="card-items">
+            <img
+              src="./assets/icon/award-icon.svg"
+              alt="Awards Icon"
+              class="info-icon"
+            />
+            <h3>Awards</h3>
+            <ul class="info-cards-text">
+              <li>Best Actress – Premio Teatro di Sicilia (2022)</li>
+              <li>Audience Award – Palermo Fringe Festival (2021)</li>
+            </ul>
+          </div>
+          <div class="card-items">
+            <img
+              src="./assets/icon/training.svg"
+              alt="Training Icon"
+              class="info-icon"
+            />
+            <h3>Training</h3>
+            <ul class="info-cards-text">
+              <li>Accademia Nazionale d’Arte Drammatica (Rome)</li>
+              <li>Physical Theatre & Voice Training</li>
+              <li>Contemporary Improvisation Workshops</li>
+            </ul>
+          </div>
+          <div class="card-items">
+            <img
+              src="./assets/icon/passion-icon.svg"
+              alt="Passion Icon"
+              class="info-icon"
+            />
+            <h3>Passion</h3>
+            <ul class="info-cards-text">
+              <li>Theatre education</li>
+              <li>Improvisation & movement</li>
+              <li>Feminine narratives on stage</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="productions" class="productions-section padding--container">
+        <div class="heading mt-4rem">
+          <h2>Notable Productions</h2>
+          <hr class="separator" />
+          <p>Bla bla bla bla bla</p>
+        </div>
+
+        <div class="productions-grid mt-4rem">
+          <div class="production-card">
+            <div class="productions-img img-casa">
+              <p class="production-name">La Casa delle Donne</p>
+              <p class="role-name">Role: Rosa</p>
+            </div>
+
+            <div class="production-details">
+              <div class="location-row">
+                <img
+                  src="./assets/icon/location-icon.svg"
+                  alt="Location Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">Teatro Massimo, Palermo</p>
+              </div>
+
+              <div class="year-row">
+                <img
+                  src="./assets/icon/calendar-icon.svg"
+                  alt="Calendar Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">2024</p>
+              </div>
+
+              <p class="production-cards-text">
+                A powerful contemporary drama exploring female identity and
+                resilience in Southern Italy.
+              </p>
+            </div>
+          </div>
+
+          <div class="production-card">
+            <div class="productions-img img-antigone">
+              <p class="production-name">Antigone</p>
+              <p class="role-name">Role: Ismene</p>
+            </div>
+
+            <div class="production-details">
+              <div class="location-row">
+                <img
+                  src="./assets/icon/location-icon.svg"
+                  alt="Location Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">Teatro Greco, Siracusa</p>
+              </div>
+
+              <div class="year-row">
+                <img
+                  src="./assets/icon/calendar-icon.svg"
+                  alt="Calendar Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">2023</p>
+              </div>
+
+              <p class="production-cards-text">
+                A minimalist and physical interpretation of Sophocles’ tragedy,
+                praised for its emotional depth.
+              </p>
+            </div>
+          </div>
+
+          <div class="production-card">
+            <div class="productions-img img-medea">
+              <p class="production-name">Il Silenzio di Medea</p>
+              <p class="role-name">Role: Medea</p>
+            </div>
+
+            <div class="production-details">
+              <div class="location-row">
+                <img
+                  src="./assets/icon/location-icon.svg"
+                  alt="Location Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">Teatro Garibaldi, Palermo</p>
+              </div>
+
+              <div class="year-row">
+                <img
+                  src="./assets/icon/calendar-icon.svg"
+                  alt="Calendar Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">2021</p>
+              </div>
+
+              <p class="production-cards-text">
+                An intense solo performance blending classical text with modern
+                movement theatre.
+              </p>
+            </div>
+          </div>
+
+          <div class="production-card">
+            <div class="productions-img img-enrico">
+              <p class="production-name">Enrico</p>
+              <p class="role-name">Role: Regina Margherita</p>
+            </div>
+
+            <div class="production-details">
+              <div class="location-row">
+                <img
+                  src="./assets/icon/location-icon.svg"
+                  alt="Location Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">Teatro Al Massimo, Palermo</p>
+              </div>
+
+              <div class="year-row">
+                <img
+                  src="./assets/icon/calendar-icon.svg"
+                  alt="Calendar Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">2023</p>
+              </div>
+
+              <p class="production-cards-text">
+                A powerful and refined portrayal of Queen Margherita in a
+                contemporary adaptation inspired by Shakespeare’s Richard III. A
+                performance marked by authority, emotional restraint, and inner
+                conflict.
+              </p>
+            </div>
+          </div>
+
+          <div class="production-card">
+            <div class="productions-img img-senza-confini">
+              <p class="production-name">Donne Senza Confini</p>
+              <p class="role-name">Role: Rosa</p>
+            </div>
+
+            <div class="production-details">
+              <div class="location-row">
+                <img
+                  src="./assets/icon/location-icon.svg"
+                  alt="Location Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">Piccolo Teatro, Milan</p>
+              </div>
+
+              <div class="year-row">
+                <img
+                  src="./assets/icon/calendar-icon.svg"
+                  alt="Calendar Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">2022</p>
+              </div>
+
+              <p class="production-cards-text">
+                An ensemble production giving voice to women navigating
+                displacement, identity, and solidarity. Rosa is portrayed with
+                quiet strength and emotional depth.
+              </p>
+            </div>
+          </div>
+
+          <div class="production-card">
+            <div class="productions-img img-echi-damore">
+              <p class="production-name">Echi d’Amore</p>
+              <p class="role-name">Role: Laura</p>
+            </div>
+
+            <div class="production-details">
+              <div class="location-row">
+                <img
+                  src="./assets/icon/location-icon.svg"
+                  alt="Location Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">Teatro Garibaldi, Palermo</p>
+              </div>
+
+              <div class="year-row">
+                <img
+                  src="./assets/icon/calendar-icon.svg"
+                  alt="Calendar Icon"
+                  class="production-icon"
+                />
+                <p class="pr-loc">2019</p>
+              </div>
+
+              <p class="production-cards-text">
+                A powerful monologue-driven production exploring longing and unspoken emotions. Laura’s character unfolds through language, silence, and physical presence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="./script.js"></script>
   </body>

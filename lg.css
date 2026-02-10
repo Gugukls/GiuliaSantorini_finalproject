@@ -1,0 +1,74 @@
+/* @media all and (min-width:1024px){
+} */
+
+/* main {
+  max-width: 1184px;
+  margin: auto;
+} */
+
+body {
+  font-size: 1.2rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: 60px;
+  gap: 50px;
+  padding: 32px 17px;
+}
+
+.nav_list {
+  display: flex;
+  gap: 50px;
+
+}
+
+.nav__hamburger {
+  display: none;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.biography-section {
+  align-items: center;
+  text-align: justify;
+   max-width: 1184px;
+  margin: 2rem auto;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.info-cards-text {
+  color: var(--dark-black-color);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: left;
+}
+
+.productions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+   max-width: 1184px;
+  margin: 2rem auto;
+  
+}
+
+.productions-section {
+  background-color: var(--light-white-color);
+
+}
+
+.btn {
+  padding: 0.5rem 8rem;
+}

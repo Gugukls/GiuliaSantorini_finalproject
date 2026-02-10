@@ -1,0 +1,43 @@
+/* @media all and (min-width:1024px){
+} */
+
+/* main {
+  max-width: 1184px;
+  margin: auto;
+} */
+
+body {
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.padding--container {
+  padding: 0 2rem;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.info-cards-text {
+  color: var(--dark-black-color);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: left;
+}
+
+.productions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.productions-section {
+  background-color: var(--light-white-color);
+  width: 100%;
+}

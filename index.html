@@ -19,8 +19,8 @@
     />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
+     <header>
+      <nav>
         <a href="#home" class="logo-text">GIULIA SANTORINI</a>
         <ul class="nav_list">
           <li><a href="#home">Home</a></li>
@@ -32,10 +32,21 @@
           <span class="hamburger-icon"></span>
         </button>
       </nav>
-    </header>
-    <main>
+
       <section class="hero" id="home">
-        <div class="hero-content padding--container">
+        <img
+          src="./assets/Giulia_Santorini_ld.png"
+          srcset="
+            ./assets/Giulia_Santorini_sm.png  600w,
+            ./assets/Giulia_Santorini_md.png  900w,
+            ./assets/Giulia_Santorini_ld.png 1200w
+          "
+          sizes="100vw"
+          alt="Performans sanatçısı Rosa sahnede"
+          class="hero-img"
+          loading="eager"
+        />
+        <div class="hero-overlay">
           <p class="tagline">THEATRE ACTRESS</p>
           <h1>Giulia Santorini</h1>
           <p class="hero_summary">
@@ -48,7 +59,9 @@
           </div>
         </div>
       </section>
+    </header>
 
+    <main>
       <section id="biography" class="biography-section padding--container">
         <div class="heading">
           <h2>Biography</h2>
@@ -126,9 +139,21 @@
 
         <div class="productions-grid mt-4rem">
           <div class="production-card">
-            <div class="productions-img img-casa">
-              <p class="production-name">La Casa delle Donne</p>
-              <p class="role-name">Role: Rosa</p>
+            <div class="img-container">
+              <img
+                src="./assets/La_Casa_delle_Donne_small.png"
+                srcset="
+                  ./assets/La_Casa_delle_Donne_small.png  600w,
+                  ./assets/La_Casa_delle_Donne_large.png 1200w
+                "
+                sizes="(max-width: 600px) 100vw, 1200px"
+                alt="Photo from La Casa delle Donne production"
+                loading="lazy"
+              />
+              <div class="text-overlay">
+                <p>La Casa delle Donne</p>
+                <p class="production-role">Role: Rosa</p>
+              </div>
             </div>
 
             <div class="production-details">
@@ -149,7 +174,6 @@
                 />
                 <p class="pr-loc">2024</p>
               </div>
-
               <p class="production-cards-text">
                 A powerful contemporary drama exploring female identity and
                 resilience in Southern Italy.
@@ -158,9 +182,21 @@
           </div>
 
           <div class="production-card">
-            <div class="productions-img img-antigone">
-              <p class="production-name">Antigone</p>
-              <p class="role-name">Role: Ismene</p>
+            <div class="img-container">
+              <img
+                src="./assets/Antigone.png"
+                srcset="
+                  ./assets/Antigone_small.png   600w,
+                  ./assets/Antigone_large.webp 1200w
+                "
+                sizes="(max-width: 600px) 100vw, 1200px"
+                alt="Photo from Antigone production"
+                loading="lazy"
+              />
+              <div class="text-overlay">
+                <p>Antigone</p>
+                <p class="production-role">Role: Ismene</p>
+              </div>
             </div>
 
             <div class="production-details">
@@ -190,9 +226,21 @@
           </div>
 
           <div class="production-card">
-            <div class="productions-img img-medea">
-              <p class="production-name">Il Silenzio di Medea</p>
-              <p class="role-name">Role: Medea</p>
+            <div class="img-container">
+              <img
+                src="./assets/il_silenzio_di_medea_small.png"
+                srcset="
+                  ./assets/il_silenzio_di_medea_small.png  600w,
+                  ./assets/il_silenzio_di_medea_large.png 1200w
+                "
+                sizes="(max-width: 600px) 100vw, 1200px"
+                alt="Photo from Il Silenzio di Medea production"
+                loading="lazy"
+              />
+              <div class="text-overlay">
+                <p>Il Silenzio di Medea</p>
+                <p class="production-role">Role: Medea</p>
+              </div>
             </div>
 
             <div class="production-details">
@@ -222,9 +270,21 @@
           </div>
 
           <div class="production-card">
-            <div class="productions-img img-enrico">
-              <p class="production-name">Enrico</p>
-              <p class="role-name">Role: Regina Margherita</p>
+            <div class="img-container">
+              <img
+                src="./assets/Enrico_small.png"
+                srcset="
+                  ./assets/Enrico_small.png  600w,
+                  ./assets/Enrico_large.png 1200w
+                "
+                sizes="(max-width: 600px) 100vw, 1200px"
+                alt="Photo from Enrico production"
+                loading="lazy"
+              />
+              <div class="text-overlay">
+                <p>Enrico</p>
+                <p class="production-role">Role: Regina Margherita</p>
+              </div>
             </div>
 
             <div class="production-details">
@@ -256,9 +316,21 @@
           </div>
 
           <div class="production-card">
-            <div class="productions-img img-senza-confini">
-              <p class="production-name">Donne Senza Confini</p>
-              <p class="role-name">Role: Rosa</p>
+            <div class="img-container">
+              <img
+                src="./assets/Donne_senza_confini_small.png"
+                srcset="
+                  ./assets/Donne_senza_confini_small.png  600w,
+                  ./assets/Donne_senza_confini_large.png 1200w
+                "
+                sizes="(max-width: 600px) 100vw, 1200px"
+                alt="Photo from Donne Senza Confini production"
+                loading="lazy"
+              />
+              <div class="text-overlay">
+                <p>Donne Senza Confini</p>
+                <p class="production-role">Role: Rosa</p>
+              </div>
             </div>
 
             <div class="production-details">
@@ -289,9 +361,21 @@
           </div>
 
           <div class="production-card">
-            <div class="productions-img img-echi-damore">
-              <p class="production-name">Echi d’Amore</p>
-              <p class="role-name">Role: Laura</p>
+            <div class="img-container">
+              <img
+                src="./assets/Enchidi_amore_small.png"
+                srcset="
+                  ./assets/Enchidi_amore_small.png  600w,
+                  ./assets/Enchidi_amore_large.png 1200w
+                "
+                sizes="(max-width: 600px) 100vw, 1200px"
+                alt="Photo from Echi d’Amore production"
+                loading="lazy"
+              />
+              <div class="text-overlay">
+                <p>Echi d’Amore</p>
+                <p class="production-role">Role: Laura</p>
+              </div>
             </div>
 
             <div class="production-details">
@@ -314,13 +398,32 @@
               </div>
 
               <p class="production-cards-text">
-                A powerful monologue-driven production exploring longing and unspoken emotions. Laura’s character unfolds through language, silence, and physical presence.
+                A powerful monologue-driven production exploring longing and
+                unspoken emotions. Laura’s character unfolds through language,
+                silence, and physical presence.
               </p>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <footer id="contact" class="footer padding--container">
+      <div class="footer-content">
+        <h2>Contact</h2>
+        <p>
+          For bookings, collaborations, or inquiries, please reach out via email
+          or follow on social media.
+        </p>
+        <ul class="contact-list">
+          <li>
+            Email:
+            <a href="mailto:giulia.santorini@gmail.com"
+              >giulia.santorini@gmail.com</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>

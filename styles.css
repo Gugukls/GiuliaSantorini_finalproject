@@ -23,9 +23,6 @@ body {
   font-weight: 300;
 }
 
-header {
-  background-color: #fbfbfd;
-}
 
 a {
   text-decoration: none;
@@ -40,11 +37,6 @@ ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
-}
-
-main {
-  max-width: 896px;
-  margin: auto;
 }
 
 h1 {
@@ -62,13 +54,38 @@ h2 {
 }
 
 p {
-  line-height: 26px;
+  line-height: 1.5rem;
 }
 
 .logo-text {
   font-weight: 500;
   letter-spacing: 0.2em;
   color: var(--primary-text-color);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  align-items: center;
+  padding-inline: 2rem;
+
+  background-color: rgba(255, 255, 255, 0.9);
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  z-index: 10;
+}
+
+/* Solid state */
+nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .nav_list {
@@ -85,8 +102,8 @@ p {
   /* Başlangıçta gizlemek için: */
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px); /* Hafif yukarıda dursun */
-  transition: all 0.3s ease; /* Yumuşak açılış efekti */
+  transform: translateY(-20px); 
+  transition: all 0.3s ease; 
 }
 
 /* Menü açıldığında eklenecek sınıf */
@@ -118,34 +135,8 @@ p {
   background: none;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: var(--nav-height);
-  display: flex;
-  align-items: center;
-  padding-inline: 2rem;
-
-  background-color: rgba(255, 255, 255, 0.9);
-
-  transition:
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
-  z-index: 10;
-}
-
-/* Solid state */
-.navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: black;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 .padding--container {
-  padding: 0 17px;
+  padding: 0 20px;
 }
 
 .mt-4rem {
@@ -153,30 +144,35 @@ p {
 }
 
 .hero {
-  background-image: image-set(
-    url("assets/Giulia_Santorini_896.png") 1x,
-    url("assets/Giulia_Santorini_ld.png") 2x
-  );
-
-  min-height: 100vh;
-  padding-top: var(--nav-height);
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: center;
-  padding-bottom: 100px;
+position: relative;
+  width: 100%;
+  height: 100vh; /* Ekranın tamamını kaplaması için */
+  min-height: 400px; /* Mobilde çok daralmaması için */
+  overflow: hidden;
 }
 
-.hero-content {
-  text-align: center;
+.hero-img {
+position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resmi sünmeden her boyuta uydurur */
+  object-position: center; /* Merkeze odaklanır, isterseniz 'top' da yapabilirsiniz */
+  z-index: -1;
+}
+
+.hero-overlay {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  justify-content: flex-end; /* Dikeyde ortalar */
+  align-items: center;     /* Yatayda ortalar */
+  padding-bottom: 6rem;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1); 
+  /* Resmin üzerine hafif bir koyuluk katar */
 }
 
 .tagline {
@@ -198,8 +194,7 @@ p {
 }
 
 .btn {
-  background-color: var(--primary-dark-color);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 4rem;
   border-radius: 2rem;
   background-color: rgba(0, 0, 0, 0.5);
   border: solid 0.5px #eeeeee;
@@ -208,11 +203,7 @@ p {
 
 .btn:hover {
   background-color: var(--primary-dark-color);
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
   background-color: rgba(0, 0, 0, 0.9);
-  border: solid 0.5px #eeeeee;
-  color: white;
 }
 
 .heading {
@@ -231,9 +222,6 @@ p {
 }
 
 .biography-section {
-  /* display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1.5rem; */
   align-items: center;
   text-align: justify;
 }
@@ -276,59 +264,52 @@ p {
   display: grid;
   grid-template-columns: 1 / 1;
   gap: 1.5rem;
+  padding-bottom: 4rem;
 }
 
 .production-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
   box-shadow: 0px 1px 3px var(--light-black-color);
   border-radius: 1rem;
 }
 
-.productions-img {
-  background-size: cover; /* Resmi alanı kaplayacak şekilde boyutlandırır */
-  background-position: center; /* Resmi ortalar */
-  background-repeat: no-repeat; /* Resmin tekrarlanmasını engeller */
-  border-radius: 1rem 1rem 0 0;
-  height: 270px;
+.img-container {
+  position: relative; /* Yazıların buraya çapalanmasını sağlar */
+  width: 100%;
+  height: 270px; /* Sabit yükseklik */
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0; /* Sadece üst köşeler yuvarlak */
+}
 
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resmi bozmadan kutuyu doldurur */
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Flexbox Ayarları */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  color: white;
-  padding: 0.8rem;
+  justify-content: flex-end; /* İçeriği en alta iter */
+  align-items: flex-start; /* İçeriği sola yaslar */
+
+  padding: 1rem; /* Kenarlardan boşluk */
+  color: white; /* Yazı rengi */
+
+  /* Yazının okunması için hafif bir gölge efekti */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 40%);
 }
 
-.img-casa {
-  background-image: url("./assets/La_Casa_delle_Donne.png");
-}
-
-.img-antigone {
-  background-image: url("./assets/Antigone.webp");
-}
-
-.img-medea {
-  background-image: url("./assets/solo_performance.png");
-}
-
-.img-enrico {
-  background-image: url("./assets/Enrico.png");
-}
-
-.img-senza-confini {
-    background-image: url("./assets/Donne_senza_confini.png");
-}
-
-.img-echi-damore {
-      background-image: url("./assets/enci_di_amore.webp");
-
-}
-
-.role-name {
-  font-size: 0.75rem;
-  font-style: italic;
+.production-role {
+font-size: 0.75rem;
+font-style: italic;
 }
 
 .production-details {

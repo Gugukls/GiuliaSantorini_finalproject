@@ -10,7 +10,7 @@
       href="./md.css"
       media="(min-width:768px) and (max-width: 1023.98px)"
     />
-    <link rel="stylesheet" href="./lg.css" media="(min-width:1024px)" />
+    <link rel="stylesheet" href="./ld.css" media="(min-width:1024px)" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,17 +19,19 @@
     />
   </head>
   <body>
-     <header>
+    <header>
       <nav>
-        <a href="#home" class="logo-text">GIULIA SANTORINI</a>
-        <ul class="nav_list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#biography">Biography</a></li>
-          <li><a href="#productions">Productions</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav__content">
+          <a href="#home" class="nav__logo">GIULIA SANTORINI</a>
+          <ul class="nav__list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#productions">Productions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
         <button class="nav__hamburger" aria-label="Open Menu">
-          <span class="hamburger-icon"></span>
+          <span class="nav__hamburger-icon"></span>
         </button>
       </nav>
 
@@ -43,19 +45,19 @@
           "
           sizes="100vw"
           alt="Performans sanatçısı Rosa sahnede"
-          class="hero-img"
+          class="hero__img"
           loading="eager"
         />
-        <div class="hero-overlay">
-          <p class="tagline">THEATRE ACTRESS</p>
+        <div class="hero__overlay">
+          <p class="hero__tagline">THEATRE ACTRESS</p>
           <h1>Giulia Santorini</h1>
-          <p class="hero_summary">
+          <p class="hero__summary">
             Bringing emotional truth to the stage through contemporary and
             classical theatre
           </p>
           <div class="hero__mlbtn">
             <a class="btn" href="#productions">View Productions</a>
-            <a class="btn btn--secondary" href="#contact">Get In Touch</a>
+            <a class="btn" href="#contact">Get In Touch</a>
           </div>
         </div>
       </section>
@@ -63,11 +65,11 @@
 
     <main>
       <section id="biography" class="biography-section padding--container">
-        <div class="heading">
+        <div class="biography__heading">
           <h2>Biography</h2>
           <hr class="separator" />
         </div>
-        <div class="biography-text">
+        <div class="biography__text">
           <p>
             Giulia Santoro is a Palermo-based theatre actress and drama teacher
             with over fifteen years of experience in contemporary and classical
@@ -88,40 +90,42 @@
             independent theatre companies across Italy.
           </p>
         </div>
-        <div class="info-cards mt-4rem">
-          <div class="card-items">
+        <div class="biography-card mt-4rem">
+          <div class="biography-card__item">
             <img
               src="./assets/icon/award-icon.svg"
               alt="Awards Icon"
-              class="info-icon"
+              class="biography-card__icon"
             />
             <h3>Awards</h3>
-            <ul class="info-cards-text">
+            <ul class="biography-card__text">
               <li>Best Actress – Premio Teatro di Sicilia (2022)</li>
               <li>Audience Award – Palermo Fringe Festival (2021)</li>
             </ul>
           </div>
-          <div class="card-items">
+          
+          <div class="biography-card__item">
             <img
               src="./assets/icon/training.svg"
               alt="Training Icon"
-              class="info-icon"
+              class="biography-card__icon"
             />
             <h3>Training</h3>
-            <ul class="info-cards-text">
+            <ul class="biography-card__text">
               <li>Accademia Nazionale d’Arte Drammatica (Rome)</li>
               <li>Physical Theatre & Voice Training</li>
               <li>Contemporary Improvisation Workshops</li>
             </ul>
           </div>
-          <div class="card-items">
+
+          <div class="biography-card__item">
             <img
               src="./assets/icon/passion-icon.svg"
               alt="Passion Icon"
-              class="info-icon"
+              class="biography-card__icon"
             />
             <h3>Passion</h3>
-            <ul class="info-cards-text">
+            <ul class="biography-card__text">
               <li>Theatre education</li>
               <li>Improvisation & movement</li>
               <li>Feminine narratives on stage</li>
@@ -131,15 +135,15 @@
       </section>
 
       <section id="productions" class="productions-section padding--container">
-        <div class="heading mt-4rem">
+        <div class="productions__heading mt-4rem">
           <h2>Notable Productions</h2>
           <hr class="separator" />
-          <p>Bla bla bla bla bla</p>
+          <p>A selection of memorable performances across renowned theatres</p>
         </div>
 
-        <div class="productions-grid mt-4rem">
+        <div class="productions__grid mt-4rem">
           <div class="production-card">
-            <div class="img-container">
+            <div class="production-card__media">
               <img
                 src="./assets/La_Casa_delle_Donne_small.png"
                 srcset="
@@ -150,29 +154,29 @@
                 alt="Photo from La Casa delle Donne production"
                 loading="lazy"
               />
-              <div class="text-overlay">
-                <p>La Casa delle Donne</p>
-                <p class="production-role">Role: Rosa</p>
+              <div class="production-card__overlay">
+                <p class="production-card__name">La Casa delle Donne</p>
+                <p class="production-card__role">Role: Rosa</p>
               </div>
             </div>
 
-            <div class="production-details">
-              <div class="location-row">
+            <div class="production-card__details">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/location-icon.svg"
                   alt="Location Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">Teatro Massimo, Palermo</p>
+                <p class="production-card__info-text">Teatro Massimo, Palermo</p>
               </div>
 
-              <div class="year-row">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/calendar-icon.svg"
                   alt="Calendar Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">2024</p>
+                <p class="production-card__info-text">2024</p>
               </div>
               <p class="production-cards-text">
                 A powerful contemporary drama exploring female identity and
@@ -182,7 +186,7 @@
           </div>
 
           <div class="production-card">
-            <div class="img-container">
+            <div class="production-card__media">
               <img
                 src="./assets/Antigone.png"
                 srcset="
@@ -193,29 +197,29 @@
                 alt="Photo from Antigone production"
                 loading="lazy"
               />
-              <div class="text-overlay">
-                <p>Antigone</p>
-                <p class="production-role">Role: Ismene</p>
+              <div class="production-card__overlay">
+                <p class="production-card__name">Antigone</p>
+                <p class="production-card__role">Role: Ismene</p>
               </div>
             </div>
 
-            <div class="production-details">
-              <div class="location-row">
+            <div class="production-card__details">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/location-icon.svg"
                   alt="Location Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">Teatro Greco, Siracusa</p>
+                <p class="production-card__info-text">Teatro Greco, Siracusa</p>
               </div>
 
-              <div class="year-row">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/calendar-icon.svg"
                   alt="Calendar Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">2023</p>
+                <p class="production-card__info-text">2023</p>
               </div>
 
               <p class="production-cards-text">
@@ -226,7 +230,7 @@
           </div>
 
           <div class="production-card">
-            <div class="img-container">
+            <div class="production-card__media">
               <img
                 src="./assets/il_silenzio_di_medea_small.png"
                 srcset="
@@ -237,29 +241,29 @@
                 alt="Photo from Il Silenzio di Medea production"
                 loading="lazy"
               />
-              <div class="text-overlay">
-                <p>Il Silenzio di Medea</p>
-                <p class="production-role">Role: Medea</p>
+              <div class="production-card__overlay">
+                <p class="production-card__name">Il Silenzio di Medea</p>
+                <p class="production-card__role">Role: Medea</p>
               </div>
             </div>
 
-            <div class="production-details">
-              <div class="location-row">
+            <div class="production-card__details">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/location-icon.svg"
                   alt="Location Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">Teatro Garibaldi, Palermo</p>
+                <p class="production-card__info-text">Teatro Garibaldi, Palermo</p>
               </div>
 
-              <div class="year-row">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/calendar-icon.svg"
                   alt="Calendar Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">2021</p>
+                <p class="production-card__info-text">2021</p>
               </div>
 
               <p class="production-cards-text">
@@ -270,7 +274,7 @@
           </div>
 
           <div class="production-card">
-            <div class="img-container">
+            <div class="production-card__media">
               <img
                 src="./assets/Enrico_small.png"
                 srcset="
@@ -281,29 +285,29 @@
                 alt="Photo from Enrico production"
                 loading="lazy"
               />
-              <div class="text-overlay">
-                <p>Enrico</p>
-                <p class="production-role">Role: Regina Margherita</p>
+              <div class="production-card__overlay">
+                <p class="production-card__name">Enrico</p>
+                <p class="production-card__role">Role: Regina Margherita</p>
               </div>
             </div>
 
-            <div class="production-details">
-              <div class="location-row">
+            <div class="production-card__details">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/location-icon.svg"
                   alt="Location Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">Teatro Al Massimo, Palermo</p>
+                <p class="production-card__info-text">Teatro Al Massimo, Palermo</p>
               </div>
 
-              <div class="year-row">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/calendar-icon.svg"
                   alt="Calendar Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">2023</p>
+                <p class="production-card__info-text">2023</p>
               </div>
 
               <p class="production-cards-text">
@@ -316,7 +320,7 @@
           </div>
 
           <div class="production-card">
-            <div class="img-container">
+            <div class="production-card__media">
               <img
                 src="./assets/Donne_senza_confini_small.png"
                 srcset="
@@ -327,29 +331,29 @@
                 alt="Photo from Donne Senza Confini production"
                 loading="lazy"
               />
-              <div class="text-overlay">
-                <p>Donne Senza Confini</p>
-                <p class="production-role">Role: Rosa</p>
+              <div class="production-card__overlay">
+                <p class="production-card__name">Donne Senza Confini</p>
+                <p class="production-card__role">Role: Rosa</p>
               </div>
             </div>
 
-            <div class="production-details">
-              <div class="location-row">
+            <div class="production-card__details">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/location-icon.svg"
                   alt="Location Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">Piccolo Teatro, Milan</p>
+                <p class="production-card__info-text">Piccolo Teatro, Milan</p>
               </div>
 
-              <div class="year-row">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/calendar-icon.svg"
                   alt="Calendar Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">2022</p>
+                <p class="production-card__info-text">2022</p>
               </div>
 
               <p class="production-cards-text">
@@ -361,7 +365,7 @@
           </div>
 
           <div class="production-card">
-            <div class="img-container">
+            <div class="production-card__media">
               <img
                 src="./assets/Enchidi_amore_small.png"
                 srcset="
@@ -372,29 +376,29 @@
                 alt="Photo from Echi d’Amore production"
                 loading="lazy"
               />
-              <div class="text-overlay">
-                <p>Echi d’Amore</p>
-                <p class="production-role">Role: Laura</p>
+              <div class="production-card__overlay">
+                <p class="production-card__name">Echi d’Amore</p>
+                <p class="production-card__role">Role: Laura</p>
               </div>
             </div>
 
-            <div class="production-details">
-              <div class="location-row">
+            <div class="production-card__details">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/location-icon.svg"
                   alt="Location Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">Teatro Garibaldi, Palermo</p>
+                <p class="production-card__info-text">Teatro Garibaldi, Palermo</p>
               </div>
 
-              <div class="year-row">
+              <div class="production-card__info-row">
                 <img
                   src="./assets/icon/calendar-icon.svg"
                   alt="Calendar Icon"
-                  class="production-icon"
+                  class="production-card__icon"
                 />
-                <p class="pr-loc">2019</p>
+                <p class="production-card__info-text">2019</p>
               </div>
 
               <p class="production-cards-text">
@@ -407,21 +411,77 @@
         </div>
       </section>
     </main>
-    <footer id="contact" class="footer padding--container">
-      <div class="footer-content">
-        <h2>Contact</h2>
-        <p>
-          For bookings, collaborations, or inquiries, please reach out via email
-          or follow on social media.
-        </p>
-        <ul class="contact-list">
-          <li>
-            Email:
-            <a href="mailto:giulia.santorini@gmail.com"
+
+    <footer id="contact" class="padding--container">
+      <div class="footer__content">
+
+        <div class="footer__first-column">
+          
+          <h2 class="footer__title">Giulia Santorini</h2>
+          <p class="footer__text">
+            Award-winning theatre actress and educator dedicated to creating
+            emotionally authentic performances and meaningful artistic exchange.
+          </p>
+        </div>
+
+        <div class="footer__second-column">
+
+          <h2 class="footer__subtitle">Get in Touch</h2>
+
+          <div class="footer__info-row">
+            <img
+              src="./assets/icon/email-icon.svg"
+              alt="Email Icon"
+              class="footer__icon"
+            />
+            <a class="footer__text" href="mailto:giulia.santorini@gmail.com"
               >giulia.santorini@gmail.com</a
             >
-          </li>
-        </ul>
+          </div>
+
+          <div class="footer__info-row">
+            <img
+              src="./assets/icon/phone-icon.svg"
+              alt="Phone Icon"
+              class="footer__icon"
+            />
+            <a class="footer__text" href="tel:+393471234567">+39 347 123 4567</a>
+          </div>
+        </div>
+
+        <div class="footer__third-column">
+
+          <h2 class="footer__subtitle">Follow</h2>
+          <div class="footer__info-row">
+            <a href="https://www.instagram.com/giuliasantorini/" target="_blank">
+              <img
+                src="./assets/icon/insta-icon.svg"
+                alt="Instagram Icon"
+                class="footer__social-icon"
+              />
+            </a>
+           <a href="https://www.facebook.com/giuliasantorini" target="_blank">
+              <img
+                src="./assets/icon/fb-icon.svg"
+                alt="Facebook Icon"
+                class="footer__social-icon"
+              />
+            </a>
+                 <a href="https://www.vimeo.com/giuliasantorini" target="_blank">
+              <img
+                src="./assets/icon/vimeo-icon.svg"
+                alt="Vimeo Icon"
+                class="footer__social-icon"
+              />
+            </a>
+          </div>
+        </div>
+            </div>
+
+
+      <div class="footer--disclaimer">
+<hr class="footer-separator" />
+      <p class="copyright">© 2024 Giulia Santorini. All rights reserved.</p>
       </div>
     </footer>
     <script src="./script.js"></script>

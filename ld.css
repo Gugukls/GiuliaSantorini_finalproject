@@ -1,0 +1,99 @@
+/* @media all and (min-width:1024px){
+} */
+
+
+body {
+  font-size: 1.2rem;
+}
+nav {
+  display: block; 
+  width: 100%;
+  padding: 0%;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.nav__content {
+  max-width: 1184px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav__list {
+  flex-direction: row;
+  gap: 3.125rem;
+  position: static;    
+  width: auto;
+  background-color: transparent;
+  padding: 0;
+  opacity: 1;
+  visibility: visible;
+  transform: none; 
+}
+
+.nav__hamburger {
+  display: none;
+}
+
+.btn {
+  padding: 0.5rem 8rem;
+}
+
+.padding--container {
+  padding: 0;
+}
+
+.biography-section {
+  max-width: 1184px;
+  margin: 0 auto;
+}
+
+.biography-card {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.biography-card__text {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.productions__grid {
+  padding-top: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1184px;
+  margin: 0 auto ;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+}
+
+
+.footer__title {
+  text-align: left;
+}
+
+.footer__subtitle {
+  text-align: left;
+}
+
+.footer__info-row {
+  justify-content: left;
+  padding: 0 0 0.5rem 0 ;
+}
+
+.footer__text {
+  text-align: left;
+  font-size: 1rem;
+}
